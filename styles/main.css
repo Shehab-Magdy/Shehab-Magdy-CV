@@ -419,8 +419,12 @@
   border-radius: 3px;
   background: #FFF;
   cursor: default;
-  -webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
-          box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+  -webkit-box-shadow: inset 0 0 1px #FFF,
+ inset 0 1px 7px #EBEBEB,
+ 0 3px 6px -3px #BBB;
+          box-shadow: inset 0 0 1px #FFF,
+ inset 0 1px 7px #EBEBEB,
+ 0 3px 6px -3px #BBB;
   -webkit-transition: 300ms ease 0s;
   -moz-transition: 300ms ease 0s;
   -ms-transition: 300ms ease 0s;
@@ -1801,72 +1805,6 @@ fieldset[disabled] .btn-danger.active {
 .show > .btn-neutral.dropdown-toggle:hover {
   background-color: #FFFFFF;
   color: #FFFFFF;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.btn-neutral:hover {
-  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
-          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
-}
-
-.btn-neutral.disabled, .btn-neutral.disabled:hover, .btn-neutral.disabled:focus, .btn-neutral.disabled.focus, .btn-neutral.disabled:active, .btn-neutral.disabled.active, .btn-neutral:disabled, .btn-neutral:disabled:hover, .btn-neutral:disabled:focus, .btn-neutral:disabled.focus, .btn-neutral:disabled:active, .btn-neutral:disabled.active, .btn-neutral[disabled], .btn-neutral[disabled]:hover, .btn-neutral[disabled]:focus, .btn-neutral[disabled].focus, .btn-neutral[disabled]:active, .btn-neutral[disabled].active,
-fieldset[disabled] .btn-neutral,
-fieldset[disabled] .btn-neutral:hover,
-fieldset[disabled] .btn-neutral:focus,
-fieldset[disabled] .btn-neutral.focus,
-fieldset[disabled] .btn-neutral:active,
-fieldset[disabled] .btn-neutral.active {
-  background-color: #FFFFFF;
-  border-color: #FFFFFF;
-}
-
-.btn-neutral.btn-danger {
-  color: #FF3636;
-}
-
-.btn-neutral.btn-danger:hover, .btn-neutral.btn-danger:focus, .btn-neutral.btn-danger:active {
-  color: #ff5555;
-}
-
-.btn-neutral.btn-info {
-  color: #2CA8FF;
-}
-
-.btn-neutral.btn-info:hover, .btn-neutral.btn-info:focus, .btn-neutral.btn-info:active {
-  color: #4bb5ff;
-}
-
-.btn-neutral.btn-warning {
-  color: #FFB236;
-}
-
-.btn-neutral.btn-warning:hover, .btn-neutral.btn-warning:focus, .btn-neutral.btn-warning:active {
-  color: #ffbe55;
-}
-
-.btn-neutral.btn-success {
-  color: #18ce0f;
-}
-
-.btn-neutral.btn-success:hover, .btn-neutral.btn-success:focus, .btn-neutral.btn-success:active {
-  color: #1beb11;
-}
-
-.btn-neutral.btn-default {
-  color: #888;
-}
-
-.btn-neutral.btn-default:hover, .btn-neutral.btn-default:focus, .btn-neutral.btn-default:active {
-  color: #979797;
-}
-
-.btn-neutral.active, .btn-neutral:active, .btn-neutral:active:focus, .btn-neutral:active:hover, .btn-neutral.active:focus, .btn-neutral.active:hover,
-.show > .btn-neutral.dropdown-toggle,
-.show > .btn-neutral.dropdown-toggle:focus,
-.show > .btn-neutral.dropdown-toggle:hover {
-  background-color: #FFFFFF;
-  color: #40a249;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -5413,7 +5351,6 @@ Created using IcoMoon - icomoon.io
 [data-background-color] .social-description h2,
 [data-background-color] p,
 [data-background-color] p.blockquote,
-[data-background-color] p.blockquote small,
 [data-background-color] h1, [data-background-color] h2, [data-background-color] h3, [data-background-color] h4, [data-background-color] h5, [data-background-color] h6, [data-background-color] a:not(.btn):not(.dropdown-item),
 [data-background-color] .icons-container i {
   color: #FFFFFF;
@@ -6264,45 +6201,32 @@ Created using IcoMoon - icomoon.io
       opacity: 1;
     }
   }
-  .profile-photo .profile-photo-small {
-    margin-left: -2px;
+  .sidebar-collapse [class*="navbar-expand-"] .navbar-collapse {
+    width: 300px;
   }
-  .button-dropdown {
-    display: none;
+  .sidebar-collapse .wrapper {
+    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
-  .section-nucleo-icons .container .row > [class*="col-"]:first-child {
-    text-align: center;
+  .sidebar-collapse #bodyClick {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    opacity: 1;
+    top: 0;
+    left: auto;
+    right: 300px;
+    content: "";
+    z-index: 9999;
+    overflow-x: hidden;
+    background-color: transparent;
+    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
-  .footer .copyright {
-    text-align: right;
+  .nav-open .sidebar-collapse .navbar-collapse {
+    -webkit-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
   }
-  .section-nucleo-icons .icons-container {
-    margin-top: 65px;
-  }
-  .navbar-nav .nav-link i.fa,
-  .navbar-nav .nav-link i.now-ui-icons {
-    opacity: .5;
-  }
-  .section-images {
-    height: 500px;
-    max-height: 500px;
-  }
-  .section-images .hero-images-container {
-    max-width: 500px;
-  }
-  .section-images .hero-images-container-1 {
-    right: 10%;
-    top: 68%;
-    max-width: 269px;
-  }
-  .section-images .hero-images-container-2 {
-    right: 5%;
-    max-width: 135px;
-    top: 93%;
-  }
-}
-
-@media screen and (min-width: 992px) {
   .burger-menu .navbar-collapse {
     position: fixed;
     display: block;
@@ -6728,6 +6652,20 @@ Created using IcoMoon - icomoon.io
   .navbar-nav .nav-item:not(:last-child) {
     margin-right: 5px;
   }
+  .section-nucleo-icons .nucleo-container img {
+    width: auto;
+    left: 0;
+    top: 0;
+    height: 100%;
+    position: absolute;
+  }
+  .section-nucleo-icons .nucleo-container {
+    height: 335px;
+    position: relative;
+  }
+  .section-nucleo-icons h5 {
+    margin-bottom: 35px;
+  }
   .section-nucleo-icons .icons-container {
     margin: 0 0 0 auto;
   }
@@ -6739,7 +6677,7 @@ Created using IcoMoon - icomoon.io
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 991px) {
   .image-container.image-right {
     top: 80px;
     margin-left: -100px;
@@ -6981,12 +6919,6 @@ Created using IcoMoon - icomoon.io
 }
 
 .gallery figure.cc-effect img,
-.gallery figure.cc-effect .h4 {
-  -webkit-transform: scale(1.06, 1.06);
-  transform: scale(1.06, 1.06);
-}
-
-.gallery figure.cc-effect img,
 .gallery figure.cc-effect figcaption::before,
 .gallery figure.cc-effect figcaption::after,
 .gallery figure.cc-effect p {
@@ -7002,8 +6934,7 @@ Created using IcoMoon - icomoon.io
   transform: translate3d(0, 0, 0);
 }
 
-.gallery figure.cc-effect:hover figcaption::before,
-.gallery figure.cc-effect:hover figcaption::after {
+.gallery figure.cc-effect:hover figcaption {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -7268,4 +7199,292 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0;
+}
+
+/* ========== Custom Enhancements ========== */
+
+/* Enhanced Portfolio/Certificate Cards */
+.cc-porfolio-image {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cc-porfolio-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.cc-porfolio-image .cc-effect img {
+    opacity: 1 !important;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+.cc-porfolio-image .cc-effect figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8));
+    opacity: 0;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+}
+
+.cc-porfolio-image .cc-effect:hover figcaption {
+    opacity: 1;
+}
+
+.cc-porfolio-image .cc-effect figcaption .h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.cc-porfolio-image .cc-effect figcaption p {
+    color: white;
+    margin: 5px 0;
+}
+.cc-porfolio-image .cc-effect figure {
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+}
+.cc-porfolio-image:hover .cc-effect img {
+  transform: scale(1.05);
+}
+
+/* Better figcaption styling */
+.cc-effect figcaption {
+  background: linear-gradient(135deg, rgba(55, 140, 63, 0.95) 0%, rgba(33, 150, 243, 0.95) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.cc-effect figcaption .h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+}
+
+.cc-effect figcaption p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  opacity: 0.95;
+}
+
+/* Enhanced progress bars */
+.progress-container {
+  margin-bottom: 25px;
+}
+
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(55, 140, 63, 0.3);
+  position: relative;
+}
+
+.progress-badge {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.progress-value {
+  font-weight: 600;
+  color: #378C3F;
+}
+
+/* Enhanced Cards */
+.card {
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Navigation Tabs */
+.nav-tabs .nav-link {
+  transition: all 0.3s ease;
+  border-radius: 8px 8px 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: rgba(55, 140, 63, 0.1);
+  border-color: transparent transparent #dee2e6;
+}
+
+.nav-tabs .nav-link.active {
+  background: linear-gradient(135deg, #378C3F 0%, #2196F3 100%);
+  border-color: transparent;
+  color: white !important;
+}
+
+.nav-tabs .nav-link i {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover i {
+  transform: scale(1.2);
+}
+
+/* Enhanced Buttons */
+.btn {
+  border-radius: 25px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #378C3F 0%, #2196F3 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(55, 140, 63, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(55, 140, 63, 0.4);
+}
+
+/* Enhanced Profile Section */
+.cc-profile-image a img {
+  border: 6px solid white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cc-profile-image a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced Social Buttons */
+.btn-icon {
+  transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+/* Improved Typography */
+.h4.title {
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.h4.title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #378C3F 0%, #2196F3 100%);
+  border-radius: 2px;
+}
+
+/* Enhanced Tab Content */
+.tab-content {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Better responsive grid for certificates */
+@media (max-width: 768px) {
+  .cc-porfolio-image {
+    margin-bottom: 20px;
+  }
+  
+  .nav-tabs .nav-link {
+    padding: 10px;
+  }
+  
+  .nav-tabs .nav-link i {
+    font-size: 1.2rem;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced contact form */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #378C3F;
+  box-shadow: 0 0 0 0.2rem rgba(55, 140, 63, 0.25);
+}
+
+/* Footer enhancement */
+footer.footer {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+footer.footer .title {
+  color: white;
+  margin-top: 20px;
+}
+
+/* Experience cards enhancement */
+.cc-experience-header {
+  border-radius: 12px 0 0 12px;
+}
+
+.cc-experience .card {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+/* Improved spacing and alignment */
+.section {
+  padding: 60px 0;
+}
+
+.section:first-of-type {
+  padding-top: 80px;
 }
