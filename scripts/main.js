@@ -41,3 +41,19 @@ $('a.smooth-scroll')
     }
   }
 });
+
+// Project filter functionality
+$(document).ready(function() {
+    $('.filter-btn').on('click', function() {
+        var filter = $(this).data('filter');
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+        
+        if (filter === 'all') {
+            $('.project-card').show();
+        } else {
+            $('.project-card').hide();
+            $('.project-card[data-category*="' + filter + '"]').show();
+        }
+    });
+});
