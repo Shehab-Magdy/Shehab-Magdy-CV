@@ -30,6 +30,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body id="top">
+<div id="loader">
+    <div class="spinner"></div>
+</div>
 <header>
     <div class="profile-page sidebar-collapse">
         <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
@@ -53,12 +56,14 @@
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#Education">Education</a></li>
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link smooth-scroll" href="#testimonials">Testimonials</a></li>
                         <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
+    <div id="progress-bar"></div>
 </header>
 <div class="page-content">
     <div>
@@ -1547,6 +1552,35 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="testimonials">
+            <div class="container">
+                <div class="h4 text-center mb-4 title">Testimonials <i>LinkedIn Recommendations</i></div>
+                <div class="testimonial-slider">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Shehab's expertise in QA automation and attention to detail significantly improved our release quality. His Playwright-TypeScript frameworks reduced our testing time by 40%."</p>
+                            <p class="testimonial-author">- Project Manager, Tech Corp</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Working with Shehab on API testing was exceptional. His Rest Assured implementations caught critical issues before production, saving us from potential downtime."</p>
+                            <p class="testimonial-author">- Senior Developer, Innovate Solutions</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Shehab's database expertise and QA leadership ensured our ERP system met all business requirements. His structured approach to testing is commendable."</p>
+                            <p class="testimonial-author">- CTO, Enterprise Systems Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn" onclick="prevSlide()">Prev</button>
+                    <button class="slider-btn" onclick="nextSlide()">Next</button>
                 </div>
             </div>
         </div>
