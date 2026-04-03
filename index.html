@@ -33,6 +33,8 @@
     <link href="images/shehab_magdy_lYX_icon.ico" rel="icon">
     <!-- Lightbox for fullscreen image viewing -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -157,12 +159,12 @@
                                     <i class="fa fa-moon-o"></i>
                                 </button>
                             </li>
-                            <li class="nav-item" style="margin-left: 15px;">
+                            <!-- <li class="nav-item" style="margin-left: 15px;">
                                 <button id="dark-mode-toggle" class="btn btn-outline-secondary btn-sm"
                                     title="Toggle dark mode" aria-label="Toggle dark mode">
                                     <i class="fa fa-moon-o"></i>
                                 </button>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -176,7 +178,7 @@
                 <div class="wrapper">
                     <div class="page-header page-header-small" filter-color="blue">
                         <div class="page-header-image" data-parallax="true"
-                            style="background-image: url('images/cc-bg-1.jpg');">
+                            style="background-image: url('images/cc-bg-1.png');">
                         </div>
                         <div class="container">
                             <div class="content-center">
@@ -2089,122 +2091,411 @@
                 </div>
             </div>
             <div class="section" id="testimonials">
-                <div class="container">
-                    <div class="h4 text-center mb-4 title">Testimonials</div>
-                    <div class="testimonial-carousel-wrapper">
-                        <button class="slider-btn prev-btn" id="testimonial-prev" type="button"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
-                        
-                        <div class="testimonial-slider">
-                            <div class="testimonial-slide active">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-subject">Exceptional Team Player</div>
-                                    <p class="testimonial-text">"I had the pleasure of working with Shehab, and I can
-                                        confidently say he is an exceptional team player. He is consistently responsive,
-                                        approachable, and always willing to lend a helping hand whenever needed.<br>
-                                        Shehab’s collaborative mindset and positive attitude make him a valuable asset to
-                                        any team. He communicates effectively, follows through on commitments, and ensures
-                                        that everyone around him feels supported. His reliability and willingness to go the
-                                        extra mile truly set him apart. <br>I highly recommend Shehab to any organization
-                                        looking for someone who is not only skilled but also genuinely invested in team
-                                        success."</p>
-                                    <div class="testimonial-author">- Neha Parasar</div>
-                                    <div class="testimonial-job-title">Senior Software Engineer | Agentic AI | Voice AI | K8s</div>
+                
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player</div> -->
+                                <p class="testimonial-text">"I had the pleasure of working with Shehab, and I can
+                                    confidently say he is an exceptional team player. He is consistently responsive,
+                                    approachable, and always willing to lend a helping hand whenever needed.
+                                    <br>
+                                    Shehab’s collaborative mindset and positive attitude make him a valuable asset
+                                    to any team. He communicates effectively, follows through on commitments, and
+                                    ensures that everyone around him feels supported. His reliability and willingness to
+                                    go
+                                    the extra mile truly set him apart.
+                                    <br>
+                                    I highly recommend Shehab to any organization looking for someone who is not only
+                                    skilled but also genuinely invested in team
+                                    success."
+                                </p>
+                                <div class="testimonial-author">
+                                    <a href="https://www.linkedin.com/in/neha-parasar-69ab8382/" target="_blank"
+                                        rel="noopener noreferrer">Neha Parasar</a>
                                 </div>
+                                <div class="testimonial-job-title">Senior Software Engineer | Agentic AI | Voice AI
+                                    | K8s</div>
                             </div>
-                            <div class="testimonial-slide">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-subject">API Testing Expertise</div>
-                                    <p class="testimonial-text">"Working with Shehab on API testing was exceptional. His
-                                        Rest Assured implementations caught critical issues before production, saving us
-                                        from potential downtime."</p>
-                                    <div class="testimonial-author">- Senior Developer</div>
-                                    <div class="testimonial-job-title">Innovate Solutions</div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player2</div> -->
+                                <p class="testimonial-text">"I had the honor of being mentored by Shehab Magdy across
+                                    two organizations, G2K and ServiceNow.
+                                    <br>
+                                    Especially at G2K where he was my senior and a guiding figure in my career. His
+                                    mentorship left a lasting impact on my professional development. Shehab exemplified
+                                    professionalism, deep technical knowledge, and a sincere dedication to nurturing the
+                                    growth of his colleagues. He tackled challenges with clarity and patience,
+                                    generously sharing his expertise while encouraging me to think critically and
+                                    develop my own skills. His approachable and respectful communication style fostered
+                                    a supportive atmosphere that inspired continuous learning. Shehab also maintained
+                                    high standards for quality and consistently strived for improvement, setting an
+                                    example for the entire team. Drawing from my firsthand experience working with and
+                                    learning from him, I confidently recommend Shehab Magdy as an exceptional
+                                    professional and mentor. I would be grateful for any opportunity to work with him
+                                    again in the future."
+                                </p>
+                                <div class="testimonial-author">
+                                    <a href="https://www.linkedin.com/in/esseily104/" target="_blank"
+                                        rel="noopener noreferrer">Muhammad Abdulraheem Elesseily</a>
                                 </div>
+                                <div class="testimonial-job-title">Software Quality Engineer @ ServiceNow</div>
                             </div>
-                            <div class="testimonial-slide">
-                                <div class="testimonial-card">
-                                    <div class="testimonial-subject">Database & QA Leadership</div>
-                                    <p class="testimonial-text">"Shehab's database expertise and QA leadership ensured our
-                                        ERP system met all business requirements. His structured approach to testing is
-                                        commendable."</p>
-                                    <div class="testimonial-author">- CTO</div>
-                                    <div class="testimonial-job-title">Enterprise Systems Inc.</div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player3</div> -->
+                                <p class="testimonial-text">"I had the pleasure of managing Shehab Magdy during his time
+                                    at ServiceNow, where he worked as a Senior Software Quality Engineer. Throughout our
+                                    collaboration, Shehab consistently demonstrated a high level of professionalism,
+                                    technical expertise, and ownership in everything he did.
+                                    <br>
+                                    Shehab has a strong quality mindset and a deep understanding of software testing
+                                    principles, automation, and quality processes. He was highly reliable in delivering
+                                    complex testing tasks and proactively identifying risks. What stood out most was his
+                                    ability to think beyond test execution—he often contributed valuable insights that
+                                    improved overall test strategies and team efficiency.
+                                    <br>
+                                    In addition to his technical skills, Shehab is a great team player. He communicates
+                                    clearly, collaborates effectively with developers, and is always willing to support
+                                    his teammates. His positive attitude, commitment, and continuous learning mindset
+                                    made him a trusted and respected member of the team.
+                                    <br>
+                                    I confidently recommend Shehab for any role in Software Quality Engineering. He
+                                    would be a strong asset to any organization looking for a dedicated, skilled, and
+                                    dependable quality professional."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/mohamedhosny/"
+                                        target="_blank" rel="noopener noreferrer">- Mohamed Hosny</a>
+                                </div>
+                                <div class="testimonial-job-title">Senior Manager, Software Quality Engineering</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player4</div> -->
+                                <p class="testimonial-text">"I am pleased to recommend Shehab Magdy, one of the most
+                                    dedicated and supportive Software Test Engineers I have worked with. Throughout our
+                                    time collaborating, he consistently demonstrated exceptional professionalism, deep
+                                    technical understanding, and an outstanding willingness to help everyone around him.
+                                    <br>
+                                    He is the kind of colleague many team members naturally turn to for guidance—whether
+                                    it's solving complex testing challenges, clarifying requirements, or exploring new
+                                    tools and practices. He always brings fresh insights to every conversation, and his
+                                    ability to share knowledge effectively makes him a true reference point within the
+                                    team.
+                                    <br>
+                                    His continuous drive for improvement, strong analytical skills, and collaborative
+                                    attitude make him an invaluable asset to any engineering team. I am confident that
+                                    Shehab will continue to deliver great value wherever he works."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/maged-samy-31231b1b7/"
+                                        target="_blank" rel="noopener noreferrer">- Maged Samy</a>
+                                </div>
+                                <div class="testimonial-job-title">Software Quality Engineer | ISTQB® FL & Agile Tester
+                                    Certified</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player4</div> -->
+                                <p class="testimonial-text">"I had the opportunity to collaborate with Shehab during the
+                                    testing phase of several use cases developed by our cross-functional team. He
+                                    consistently demonstrated a high level of motivation, reliability, and a calm yet
+                                    engaged presence. Working with him was always pleasant and productive."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/çağla-bingöl-28bb95219/"
+                                        target="_blank" rel="noopener noreferrer">- Çağla Bingöl</a>
+                                </div>
+                                <div class="testimonial-job-title">Digital Consultant | Digital & IT Strategists |
+                                    Strategic Innovation Management | DB Systel GmbH |</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player5</div> -->
+                                <p class="testimonial-text">"Shehab is highly motivated person with sharp eyes for
+                                    details so I strongly recommend him as a quality engineer as per the period we
+                                    worked together, he showed a lot of innovations and ideas that lead to the success
+                                    of the project & the team."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/ali-salama-01114442813/"
+                                        target="_blank" rel="noopener noreferrer">- Ali Salama</a>
+                                </div>
+                                <div class="testimonial-job-title">Test Consultant, ®ISTQB Test Manager.</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player6</div> -->
+                                <p class="testimonial-text">"I’m proud to recognize Shehab for his exceptional
+                                    professionalism, reliability, and dedication. His strong commitment and technical
+                                    expertise consistently contribute to our team’s success and set a high standard of
+                                    excellence.
+                                    <br>
+                                    Thank you, Shehab, for your outstanding efforts and continued impact."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/mostafa-elaish-913618182/"
+                                        target="_blank" rel="noopener noreferrer">- Mostafa Elaish</a>
+                                </div>
+                                <div class="testimonial-job-title">Manager, Software Quality Engineering | ML Model
+                                    Validation | Backend Services & API QA | Kubernetes & Podman | ServiceNow</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player7</div> -->
+                                <p class="testimonial-text">"Shehab is one of the best people to turn to for help or
+                                    advice. He is always supportive and consistently provides complete and accurate
+                                    information whenever needed. His willingness to guide others and share his knowledge
+                                    makes him an invaluable colleague. Shehab is also one of the hardest-working
+                                    individuals in the company — dedicated, reliable, and always ready to lend a hand.
+                                    <br>
+                                    Thank you, Shehab, for always being there and for your constant support!"
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/yasser-moawad-9093b0225/"
+                                        target="_blank" rel="noopener noreferrer">- Yasser Moawad</a>
+                                </div>
+                                <div class="testimonial-job-title">Software Quality Engineering/ Product Owner</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player8</div> -->
+                                <p class="testimonial-text">"Shehab is a highly skilled Software Quality Engineer with
+                                    exceptional attention to detail and a strong commitment to delivering top-quality
+                                    products.
+                                    <br>
+                                    Their analytical thinking and problem-solving skills make them an invaluable part of
+                                    any development team."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/mahysalama/"
+                                        target="_blank" rel="noopener noreferrer">- Mahy Salama</a>
+                                </div>
+                                <div class="testimonial-job-title">Senior Software Quality Engineer at Service Now</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player9</div> -->
+                                <p class="testimonial-text">"I’ve had the pleasure of working closely with Shehab, and I
+                                    can confidently say that he is one of the most dedicated and dependable
+                                    professionals I’ve met. His ability to stay organized, manage multiple
+                                    responsibilities, and support the team is truly remarkable.
+                                    <br>
+                                    What stands out most about Shehab is his willingness to help others and his
+                                    proactive approach to problem-solving. No matter how busy things get, he remains
+                                    calm, focused, and always ready to lend a hand. His strong sense of ownership and
+                                    commitment to excellence make him an invaluable part of any team.
+                                    <br>
+                                    Beyond his professional skills, Shehab is a fantastic team player who fosters a
+                                    positive and collaborative environment. I highly recommend him to any organization
+                                    looking for a reliable, hardworking, and inspiring professional."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/nansy-abu-gabal-1544b971/"
+                                        target="_blank" rel="noopener noreferrer">- Nansy Abu Gabal</a>
+                                </div>
+                                <div class="testimonial-job-title">Senior Quality Engineer | ISTQB CTFLv4 Certified
                                 </div>
                             </div>
                         </div>
-
-                        <button class="slider-btn next-btn" id="testimonial-next" type="button"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player10 essam</div> -->
+                                Automation | API & Database Testing | ISTQB® CTFL</div>
+                                <p class="testimonial-text">"I’ve worked with Shehab for over four years, and during
+                                    that time I’ve seen how talented, creative, and reliable he is. He always thinks
+                                    outside the box and has an impressive ability to find smart solutions to any
+                                    challenge.
+                                    <br>
+                                    Shehab consistently takes ownership of his work and delivers great results. Even
+                                    without a formal management title, he naturally leads, supports his teammates, and
+                                    helps drive projects to success.
+                                    <br>
+                                    He’s a true problem-solver and a great team player — anyone would be lucky to have
+                                    him on their team."
+                                </p>
+                                <div class="testimonial-author"><a href="https://www.linkedin.com/in/ahmedesam1993/"
+                                        target="_blank" rel="noopener noreferrer">- Ahmed Esam</a></div>
+                                <div class="testimonial-job-title">Senior Software Quality Engineer at ServiceNow | Test
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player11 margot</div> -->
+                                <p class="testimonial-text">"Shehab Magdy is a calm and competent force. I enjoyed
+                                    working with him!"
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/margot-pullen-94a11914/"
+                                        target="_blank" rel="noopener noreferrer">- Margot Pullen</a>
+                                </div>
+                                <div class="testimonial-job-title">Engagement Manager</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player12 kiril</div> -->
+                                <p class="testimonial-text">"I am pleased to write a recommendation for my esteemed
+                                    colleague, Shehab. In the time we have worked together, I have consistently observed
+                                    his outstanding qualities that make him an invaluable team member.
+                                    <br>
+                                    Shehab is a quiet individual who carries an air of friendliness and helpfulness. His
+                                    approach to work is characterized by diligence and a commitment to high standards.
+                                    What truly sets him apart is his ability to think beyond the immediate task at hand.
+                                    <br>
+                                    One of Shehab's most commendable traits is his eagerness to learn new things. He
+                                    approaches challenges with a positive mindset, always seeking opportunities for
+                                    personal and professional growth. This not only contributes to his individual
+                                    development but also brings a fresh perspective to the team.
+                                    <br>
+                                    Furthermore, it is noteworthy that Shehab consistently remains calm under stressful
+                                    situations, showcasing remarkable composure. Working alongside Shehab has been an
+                                    absolute pleasure. His dedication to his responsibilities, coupled with his amiable
+                                    personality, has created a positive and collaborative work environment. I have no
+                                    hesitation in recommending Shehab as a valuable asset to any team or project."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/kirill-fadeev-b30b36200/"
+                                        target="_blank" rel="noopener noreferrer">- Kirill Fadeev</a>
+                                </div>
+                                <div class="testimonial-job-title">Senior Solution Consultant</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player13 nehal</div> -->
+                                <p class="testimonial-text">"Shehab is highly recommended, he is creative and hard
+                                    worker . I believe he will be a huge plus to your company."
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/nehal-abdallah-5128b328/"
+                                        target="_blank" rel="noopener noreferrer">- Nehal Abdallah</a>
+                                </div>
+                                <div class="testimonial-job-title">Software Quality Consultant. at المنظمة العربية
+                                    للتنمية الإدارية - جامعه الدول العربيه(Arab Administrative Development Organization)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player14 hany</div> -->
+                                <p class="testimonial-text">"The best practical behave I have ever knew 😀 "
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/hany-attia-b4a57914/"
+                                        target="_blank" rel="noopener noreferrer">- Hany Attia</a>
+                                </div>
+                                <div class="testimonial-job-title">IT & Systems Manager at intoegypt</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player15 ahmed. hamdy</div> -->
+                                <p class="testimonial-text">"It is my pleasure to recommend shehab. I have known him for
+                                    6 month in my capacity asProject Manager at BarTech. Company. shehab worked for me
+                                    on various projects as a consultant, and based on his work, I would rank him as one
+                                    of the best consultants we have ever had"
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/ahmed-hamdy2050/"
+                                        target="_blank" rel="noopener noreferrer">- Ahmed Hamdy</a>
+                                </div>
+                                <div class="testimonial-job-title">Manager - Operations & Projects at iWesabe | Odoo
+                                    Certified # V12 # V19</div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-card">
+                                <!-- <div class="testimonial-subject">Exceptional Team Player16 wael</div> -->
+                                <p class="testimonial-text">"Hard worker, committed, eager to learn"
+                                </p>
+                                <div class="testimonial-author"> <a href="https://www.linkedin.com/in/wael-aggour/"
+                                        target="_blank" rel="noopener noreferrer">- Wael Aggour</a>
+                                </div>
+                                <div class="testimonial-job-title">Helping Businesses Turn Conversations into
+                                    Conversions</div>
+                            </div>
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
-            <div class="section" id="contact">
-                <div class="cc-contact-information" style="background-image: url('images/staticmap1.png');">
-                    <div class="container">
-                        <div class="cc-contact">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="card mb-0" data-aos="zoom-in">
-                                        <div class="h4 text-center title">Contact Me</div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <form id="contactForm" name="contactForm">
-                                                        <div class="p pb-3">
-                                                            <strong>Feel free to contact me </strong>
-                                                        </div>
-                                                        <div class="row mb-3">
-                                                            <div class="col">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-addon">
-                                                                        <i class="fa fa-user-circle"></i>
-                                                                    </span>
-                                                                    <input class="form-control" id="name" name="name"
-                                                                        placeholder="Name" required="required"
-                                                                        type="text" />
-                                                                </div>
+        </div>
+        <div class="section" id="contact">
+            <div class="cc-contact-information" style="background-image: url('images/staticmap1.png');">
+                <div class="container">
+                    <div class="cc-contact">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="card mb-0" data-aos="zoom-in">
+                                    <div class="h4 text-center title">Contact Me</div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card-body">
+                                                <form id="contactForm" name="contactForm">
+                                                    <div class="p pb-3">
+                                                        <strong>Feel free to contact me </strong>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-user-circle"></i>
+                                                                </span>
+                                                                <input class="form-control" id="name" name="name"
+                                                                    placeholder="Name" required="required"
+                                                                    type="text" />
                                                             </div>
                                                         </div>
-                                                        <div class="row mb-3">
-                                                            <div class="col">
-                                                                <div class="input-group">
-                                                                    <span class="input-group-addon">
-                                                                        <i class="fa fa-envelope"></i>
-                                                                    </span>
-                                                                    <input class="form-control" id="email" name="email"
-                                                                        placeholder="E-mail" required="required"
-                                                                        type="email" />
-                                                                </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon">
+                                                                    <i class="fa fa-envelope"></i>
+                                                                </span>
+                                                                <input class="form-control" id="email" name="email"
+                                                                    placeholder="E-mail" required="required"
+                                                                    type="email" />
                                                             </div>
                                                         </div>
-                                                        <div class="row mb-3">
-                                                            <div class="col">
-                                                                <div class="form-group">
-                                                                    <textarea class="form-control" id="message"
-                                                                        name="message" placeholder="Your Message"
-                                                                        required="required"></textarea>
-                                                                </div>
+                                                    </div>
+                                                    <div class="row mb-3">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" id="message"
+                                                                    name="message" placeholder="Your Message"
+                                                                    required="required"></textarea>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col">
-                                                                <button class="btn btn-primary" type="submit">&nbsp;Send
-                                                                </button>
-                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <button class="btn btn-primary" type="submit">&nbsp;Send
+                                                            </button>
                                                         </div>
-                                                    </form>
-                                                </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="card-body">
-                                                    <p class="mb-0"><strong>Address </strong></p>
-                                                    <p class="pb-2">Cairo, Egypt</p>
-                                                    <p class="mb-0"><strong>Phone</strong></p>
-                                                    <p class="pb-2"><a href="tel:+201009352823">+20 100 935 2823</a></p>
-                                                    <p class="mb-0"><strong>Email</strong></p>
-                                                    <p><a
-                                                            href="mailto:shehab.magdy.eladl@outlook.com">shehab.magdy.eladl@outlook.com</a>
-                                                    </p>
-                                                </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card-body">
+                                                <p class="mb-0"><strong>Address </strong></p>
+                                                <p class="pb-2">Cairo, Egypt</p>
+                                                <p class="mb-0"><strong>Phone</strong></p>
+                                                <p class="pb-2"><a href="tel:+201009352823">+20 100 935 2823</a></p>
+                                                <p class="mb-0"><strong>Email</strong></p>
+                                                <p><a
+                                                        href="mailto:shehab.magdy.eladl@outlook.com">shehab.magdy.eladl@outlook.com</a>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -2216,24 +2507,25 @@
             </div>
         </div>
     </div>
+    </div>
 
 
     <footer class="footer">
         <div class="button-container text-center">
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.facebook.com/ShootingStar0984"
-                rel="tooltip" title="Follow me on Facebook">
+            <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank"
+                href="https://www.facebook.com/ShootingStar0984" rel="tooltip" title="Follow me on Facebook">
                 <i class="fa fa-facebook"></i></a>
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://twitter.com/cegres1" rel="tooltip"
-                title="Follow me on Twitter">
+            <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="https://twitter.com/cegres1"
+                rel="tooltip" title="Follow me on Twitter">
                 <i class="fa fa-twitter"></i></a>
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://github.com/Shehab-Magdy" rel="tooltip"
-                title="Follow me on Git hub">
+            <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" href="https://github.com/Shehab-Magdy"
+                rel="tooltip" title="Follow me on Git hub">
                 <i class="fa fa-github-alt"></i></a>
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.linkedin.com/in/shehabmagdy84/"
-                rel="tooltip" title="Follow me on Linkedin">
+            <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank"
+                href="https://www.linkedin.com/in/shehabmagdy84/" rel="tooltip" title="Follow me on Linkedin">
                 <i class="fab fa fa-linkedin"></i></a>
-            <a class="btn btn-default btn-round btn-lg btn-icon" href="https://www.hackerrank.com/profile/cegres1"
-                rel="tooltip" title="Visit my Hacker Rank">
+            <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank"
+                href="https://www.hackerrank.com/profile/cegres1" rel="tooltip" title="Visit my Hacker Rank">
                 <i class="fa fa-header"></i></a>
         </div>
         <div class="h4 title text-center">Shehab Magdy El-Adl</div>
@@ -2247,7 +2539,9 @@
     <!-- Lightbox for fullscreen image viewing -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" defer></script>
     <!-- EmailJS for contact form -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/index.min.js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="scripts/main.js" defer></script>
 
     <script>

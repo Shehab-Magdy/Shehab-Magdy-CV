@@ -203,7 +203,7 @@ function showToast(message, type) {
 }
 
 // Testimonials Slider
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
     let currentSlide = 0;
     const slides = document.querySelectorAll('.testimonial-slide');
 
@@ -245,4 +245,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Auto slide every 5 seconds
     setInterval(nextSlide, 5000);
-});
+})();
