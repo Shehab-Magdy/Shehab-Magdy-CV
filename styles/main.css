@@ -15,6 +15,101 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
  */
+
+/* Testimonial Slider Styles */
+.testimonial-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+    flex-grow: 1;
+    min-height: 250px;
+}
+.testimonial-slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(20px);
+}
+.testimonial-slide.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    position: relative;
+}
+.testimonial-subject {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #378C3F;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.testimonial-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+.testimonial-author {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #333;
+}
+.testimonial-job-title {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 5px;
+}
+.slider-btn {
+    background-color: transparent;
+    color: #378C3F;
+    border: 2px solid #378C3F;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.slider-btn:hover {
+    background-color: #378C3F;
+    color: white;
+}
+.dark-mode .testimonial-card {
+    background: #2a2a2a;
+    border-color: #444;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.dark-mode .testimonial-text {
+    color: #ccc;
+}
+.dark-mode .testimonial-author {
+    color: #eee;
+}
+.dark-mode .testimonial-job-title {
+    color: #aaa;
+}
+
 /*     brand Colors              */
 /*      light colors         */
 /* ========================================================================

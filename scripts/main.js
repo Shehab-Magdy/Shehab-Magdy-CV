@@ -116,7 +116,7 @@ window.addEventListener('load', function() {
     emailjs.init("No0RCJM1X6MzncePv");
     
     const contactForm = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('contact-submit-btn');
+    const submitBtn = document.getElementById('contact-submit-btn') || (contactForm ? contactForm.querySelector('button[type="submit"]') : null);
     let lastSubmitTime = 0;
     const submitCooldown = 5000; // 5 seconds cooldown
     
@@ -138,8 +138,10 @@ window.addEventListener('load', function() {
         }
         
         // Disable submit button to prevent double submission
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending...';
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+        }
         
         // Send email via EmailJS
         emailjs.sendForm('service_bvfw35i', 'contact_form', this)
@@ -165,8 +167,10 @@ window.addEventListener('load', function() {
                 }
             })
             .finally(function() {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send';
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send';
+                }
             });
     });
     
@@ -180,18 +184,14 @@ window.addEventListener('load', function() {
 
 
 
-// Toast Notification for Contact Form
-document.getElementById('gform').addEventListener('submit', function(e) {
-    // Assuming the form submits successfully, show toast
-    // In real implementation, check for success response
-    setTimeout(function() {
-        showToast('Message sent successfully!');
-    }, 1000);
-});
-
-function showToast(message) {
+function showToast(message, type) {
     const toast = document.createElement('div');
     toast.className = 'toast';
+    if (type === 'error') {
+        toast.style.backgroundColor = '#f44336';
+    } else if (type === 'warning') {
+        toast.style.backgroundColor = '#ff9800';
+    }
     toast.textContent = message;
     document.body.appendChild(toast);
     
