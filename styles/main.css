@@ -7590,6 +7590,13 @@ body {
   font-weight: bold;
 }
 
+testimonial-note {
+  font-style: italic; 
+  margin-top: 2px;
+  font-size: 12px;
+  color: #777;
+}
+
 .slider-controls {
   text-align: center;
   margin-top: 20px;
@@ -7607,4 +7614,113 @@ body {
 
 .slider-btn:hover {
   background: #0056b3;
+}
+
+/* Dark Mode Theme */
+html.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #2d2d2d;
+  --border-color: #444;
+}
+
+html.dark-mode body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+html.dark-mode .card {
+  background-color: #2d2d2d;
+  border-color: #444;
+}
+
+html.dark-mode .navbar {
+  background-color: #1a1a1a !important;
+  border-bottom: 1px solid #444;
+}
+
+html.dark-mode .nav-link {
+  color: #e0e0e0 !important;
+}
+
+html.dark-mode .nav-link:hover {
+  color: #ffffff !important;
+}
+
+html.dark-mode .page-header-image {
+  opacity: 0.6;
+}
+
+html.dark-mode .form-control {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #ffffff;
+}
+
+html.dark-mode .form-control:focus {
+  background-color: #2d2d2d;
+  border-color: #666;
+  color: #ffffff;
+}
+
+html.dark-mode .form-control::placeholder {
+  color: #999;
+}
+
+html.dark-mode .section {
+  background-color: #1a1a1a;
+}
+
+html.dark-mode .btn-primary {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+html.dark-mode .btn-primary:hover {
+  background-color: #004085;
+}
+
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, 
+html.dark-mode h4, html.dark-mode h5, html.dark-mode h6 {
+  color: #ffffff;
+}
+
+html.dark-mode .title {
+  color: #ffffff;
+}
+
+html.dark-mode .progress-bar {
+  background-color: #ff6b6b;
+}
+
+html.dark-mode .testimonial-content {
+  background-color: #2d2d2d;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/* Dark mode toggle button styling */
+#dark-mode-toggle {
+  background-color: transparent;
+  border: 1px solid #666;
+  color: #999;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+html.dark-mode #dark-mode-toggle {
+  border-color: #ffc107;
+  color: #ffc107;
+}
+
+html.dark-mode #dark-mode-toggle:hover {
+  background-color: #2d2d2d;
+  border-color: #ffed4e;
+  color: #ffed4e;
 }

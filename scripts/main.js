@@ -77,6 +77,109 @@ window.addEventListener('load', function() {
     }, 500); // Small delay for smooth transition
 });
 
+// Dark Mode Toggle
+(function() {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const htmlElement = document.documentElement;
+    
+    // Load dark mode preference from localStorage
+    const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+    if (isDarkMode) {
+        htmlElement.classList.add('dark-mode');
+        updateDarkModeIcon();
+    }
+
+    // Toggle dark mode
+    darkModeToggle.addEventListener('click', function() {
+        htmlElement.classList.toggle('dark-mode');
+        const isEnabled = htmlElement.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isEnabled ? 'enabled' : 'disabled');
+        updateDarkModeIcon();
+    });
+
+    function updateDarkModeIcon() {
+        const icon = document.querySelector('#dark-mode-toggle i');
+        if (!icon) return;
+        if (htmlElement.classList.contains('dark-mode')) {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    }
+})();
+
+// EmailJS Integration
+(function() {
+    // Initialize EmailJS - Replace with your actual service ID and public key
+    emailjs.init("No0RCJM1X6MzncePv");
+    
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('contact-submit-btn');
+    let lastSubmitTime = 0;
+    const submitCooldown = 5000; // 5 seconds cooldown
+    
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Rate limiting check
+        const now = Date.now();
+        if (now - lastSubmitTime < submitCooldown) {
+            showToast('Please wait before sending another message', 'warning');
+            return;
+        }
+        
+        // Spam protection - check honeypot field if needed
+        const honeypot = document.getElementById('website'); // hidden field
+        if (honeypot && honeypot.value) {
+            console.log('Spam detected');
+            return;
+        }
+        
+        // Disable submit button to prevent double submission
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        
+        // Send email via EmailJS
+        emailjs.sendForm('service_bvfw35i', 'contact_form', this)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
+                contactForm.reset();
+                lastSubmitTime = now;
+
+                if (typeof gtag === 'function') {
+                    gtag('event', 'contact_form_submit', {
+                        'status': 'success'
+                    });
+                }
+            }, function(error) {
+                console.log('FAILED...', error);
+                showToast('Failed to send message. Please try again.', 'error');
+
+                if (typeof gtag === 'function') {
+                    gtag('event', 'contact_form_submit', {
+                        'status': 'error'
+                    });
+                }
+            })
+            .finally(function() {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send';
+            });
+    });
+    
+    // Add hidden honeypot field for spam protection
+    const honeypot = document.createElement('input');
+    honeypot.type = 'hidden';
+    honeypot.id = 'website';
+    honeypot.name = 'website';
+    contactForm.appendChild(honeypot);
+})();
+
+
+
 // Toast Notification for Contact Form
 document.getElementById('gform').addEventListener('submit', function(e) {
     // Assuming the form submits successfully, show toast
@@ -100,27 +203,46 @@ function showToast(message) {
 }
 
 // Testimonials Slider
-let currentSlide = 0;
-const slides = document.querySelectorAll('.testimonial-slide');
+document.addEventListener('DOMContentLoaded', function() {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        if (i === index) {
-            slide.classList.add('active');
-        }
-    });
-}
+    if (!slides.length) {
+        return;
+    }
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Expose global names for backward compatibility with inline controls
+    window.nextSlide = nextSlide;
+    window.prevSlide = prevSlide;
+
+    // Buttons for manual control (if available)
+    const nextBtn = document.getElementById('testimonial-next');
+    const prevBtn = document.getElementById('testimonial-prev');
+
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
     showSlide(currentSlide);
-}
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
-
-// Auto slide every 5 seconds
-setInterval(nextSlide, 5000);
+    // Auto slide every 5 seconds
+    setInterval(nextSlide, 5000);
+});
