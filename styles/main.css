@@ -1449,7 +1449,7 @@
   padding: 11px 22px;
   cursor: pointer;
   background-color: #888;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .btn:hover,
@@ -3562,7 +3562,7 @@ body {
 }
 
 .navbar a:not(.btn):not(.dropdown-item) {
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .navbar p {
@@ -5092,20 +5092,23 @@ Created using IcoMoon - icomoon.io
 }
 
 .index-page .page-header {
-  height: 125vh;
+  height: 120vh;
 }
 
 .index-page .page-header .container>.content-center {
   top: 37%;
 }
-
+.page-header {
+  background-image: url('images/cc-bg-1.png');
+  height: 150; /* Ensure the header has height to show the image */
+}
 .index-page .page-header .category-absolute {
   position: absolute;
   top: 100vh;
   margin-top: -60px;
   padding: 0 15px;
   width: 100%;
-  color: rgba(255, 255, 255, 0.5);
+  /* color: rgba(255, 255, 255, 0.5); */
 }
 
 .landing-page .header {
@@ -5115,7 +5118,7 @@ Created using IcoMoon - icomoon.io
 
 .landing-page .header .container {
   padding-top: 26vh;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
   z-index: 2;
   position: relative;
 }
@@ -5129,7 +5132,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .landing-page .header .title {
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
 }
 
 .landing-page .section-team .team .team-player img {
@@ -5458,7 +5461,7 @@ Created using IcoMoon - icomoon.io
   height: 100vh;
   max-height: 1050px;
   padding: 0;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
   position: relative;
   background-position: center center;
   background-size: cover;
@@ -5467,11 +5470,11 @@ Created using IcoMoon - icomoon.io
 .page-header .page-header-image {
   position: absolute;
   background-size: 100% auto;
-  /* Fits to width, scales height proportionally */
   background-repeat: no-repeat;
-  /* Prevents the image from repeating */
   background-position: center center;
   z-index: -1;
+    background: url('images/cc-bg-1.png') center/cover;
+
 }
 
 .page-header footer {
@@ -5495,14 +5498,15 @@ Created using IcoMoon - icomoon.io
   transform: translate(-50%, -50%);
   text-align: center;
   padding: 0 15px;
-  color: #FFFFFF;
+  /* color: #FFFFFF; */
   width: 100%;
   max-width: 880px;
 }
 
 .page-header .category,
 .page-header .description {
-  color: rgba(255, 255, 255, 0.5);
+  /* color: rgba(255, 255, 255, 0.5); */
+  margin-top: 10px;
 }
 
 .page-header.page-header-small {
@@ -5523,7 +5527,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .page-header:before {
-  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rgba(0, 0, 0, 0.5); */
 }
 
 .page-header[filter-color="orange"] {
@@ -5535,6 +5539,11 @@ Created using IcoMoon - icomoon.io
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(224, 23, 3, 0.6)));
   background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(224, 23, 3, 0.6));
   /* Standard syntax */
+}
+
+.page-header[filter-color="blue"] {
+  background: transparent;
+  /* No overlay for blue filter */
 }
 
 .page-header .container {
@@ -7624,13 +7633,13 @@ Created using IcoMoon - icomoon.io
 /* Body */
 /* Profile Page Background Style */
 .page-header {
-  background: rgba(44, 44, 44, 0.2);
+  /* background: rgba(44, 44, 44, 0.2); */
   /* For browsers that do not support gradients */
   /* For Safari 5.1 to 6.0 */
   /* For Opera 11.1 to 12.0 */
   /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(55, 140, 63, 0.6)));
-  background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(55, 140, 63, 0.6));
+  /* background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(55, 140, 63, 0.6))); */
+  /* background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(55, 140, 63, 0.6)); */
   /* Standard syntax */
 }
 
@@ -7721,6 +7730,8 @@ Created using IcoMoon - icomoon.io
 /* Profile Page Social button Style */
 .button-container .btn-default {
   margin-right: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ddd;
 }
 
 /* Professional Skills Style */
